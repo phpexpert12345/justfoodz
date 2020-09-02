@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:background="#F4F9FD">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Justfoodz Wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_header">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/bal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight=".15">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Wallet Balance"
+                                android:textColor="#8d8d8d"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:id="@+id/walletamount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_15" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/wallet"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/bal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ADD MONEY TO WALLET"
+                            android:textColor="#8d8d8d"
+                            android:textSize="@dimen/sp_15" />
+
+                        <EditText
+                            android:id="@+id/amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Amount"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:textColorHint="#8d8d8d"
+                            android:textColor="#3e3e3e"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pay Mode"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_15" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_options"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_15"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/paypal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/LightGreenColor"
+                                    android:buttonTint="@color/LightGreenColor"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_5"
+                                    android:paddingEnd="@dimen/dp_5"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:text="Pay By Paypal"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp_15" />
+
+                                <RadioButton
+                                    android:id="@+id/googlepay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/LightGreenColor"
+                                    android:buttonTint="@color/LightGreenColor"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_5"
+                                    android:paddingEnd="@dimen/dp_5"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:text="@string/pay_by_credit"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp_15" />
+
+                                <RadioButton
+                                    android:visibility="gone"
+                                    android:id="@+id/stripe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/LightGreenColor"
+                                    android:buttonTint="@color/LightGreenColor"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_5"
+                                    android:paddingEnd="@dimen/dp_5"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:text="Pay By Stripe"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp_15" />
+
+
+                            </RadioGroup>
+
+
+
+
+                            <!--<RadioButton-->
+                            <!--android:id="@+id/googlepay"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:backgroundTint="@color/LightGreenColor"-->
+                            <!--android:buttonTint="@color/LightGreenColor"-->
+                            <!--android:checked="false"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="@dimen/dp_5"-->
+                            <!--android:paddingEnd="@dimen/dp_5"-->
+                            <!--android:paddingStart="@dimen/dp_5"-->
+                            <!--android:text="Google Pay"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="@dimen/sp_15" />-->
+
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/recpwdBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:text="Add Money"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/Green"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="#fff"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/bal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight=".15">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Justfoodz Points"
+                                android:textColor="#8d8d8d"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:id="@+id/loyalitypoint"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_15" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/point"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnearnmore"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:text="Earn More"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/Green"
+                        android:layout_marginLeft="15dp"
+                        android:layout_below="@+id/bal2"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#fff"/>
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

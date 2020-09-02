@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashs"
+    tools:context=".activities.SplashScreenActivity">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llgps"
+        android:padding="@dimen/dp_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:padding="@dimen/dp_3"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:src="@drawable/locationcc" />
+
+        <TextView
+            android:padding="@dimen/dp_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="GPS should be enable to continue"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/greyColor"></View>
+
+
+        <TextView
+            android:id="@+id/txtgps"
+            android:padding="@dimen/dp_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:gravity="center"
+            android:text="ENABLE GPS"
+            android:textColor="@color/greenColor"
+            android:textSize="@dimen/sp_25" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llani"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <com.skyfishjy.library.RippleBackground
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rb_color="#000"
+            app:rb_duration="3000"
+            app:rb_radius="32dp"
+            app:rb_rippleAmount="6"
+            app:rb_scale="6">
+
+            <ImageView
+                android:id="@+id/centerImage"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_200"
+                android:layout_centerInParent="true"
+                android:src="@drawable/wait" />
+
+        </com.skyfishjy.library.RippleBackground>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imgnoapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/noapp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.OrderIssueActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/order_issue_txt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_order_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_order_issue_txt"
+        android:inputType="text"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingEnd="10dp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelPadding="2dp"
+        app:met_floatingLabelTextSize="15sp" />
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_order_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_order_no_txt"
+        android:inputType="text"
+        android:maxLength="20"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingEnd="10dp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelPadding="2dp"
+        app:met_floatingLabelTextSize="15sp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_email_txt"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingEnd="10dp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelPadding="2dp"
+        app:met_floatingLabelTextSize="15sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/rectangle_white">
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edt_issue_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint=""
+            android:inputType="text"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingEnd="@dimen/dp_25"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelPadding="@dimen/dp_10"
+            app:met_floatingLabelTextSize="12sp"
+            android:gravity="top"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_submit_issue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/light_green_background"
+        android:gravity="center"
+        android:text="@string/submit_txt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15" />
+
+
+</LinearLayout>

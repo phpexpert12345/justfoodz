@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_margin="10dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/tv_reviewer_name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/app_name"
+               android:layout_weight=".1"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="@dimen/sp_15" />
+
+           <LinearLayout
+               android:id="@+id/review_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight=".1"
+               android:gravity="end"
+               android:layout_marginRight="20dp">
+
+               <ImageView
+                   android:id="@+id/review_1"
+                   android:layout_width="@dimen/dp_15"
+                   android:layout_height="@dimen/dp_15"
+                   android:background="@drawable/review_star"
+                   android:paddingEnd="@dimen/dp_3"
+                   android:paddingStart="@dimen/dp_3" />
+
+               <ImageView
+                   android:id="@+id/review_2"
+                   android:layout_width="@dimen/dp_15"
+                   android:layout_height="@dimen/dp_15"
+                   android:background="@drawable/review_star"
+                   android:paddingEnd="@dimen/dp_3"
+                   android:paddingStart="@dimen/dp_3" />
+
+               <ImageView
+                   android:id="@+id/review_3"
+                   android:layout_width="@dimen/dp_15"
+                   android:layout_height="@dimen/dp_15"
+                   android:background="@drawable/review_star"
+                   android:paddingEnd="@dimen/dp_3"
+                   android:paddingStart="@dimen/dp_3" />
+
+               <ImageView
+                   android:id="@+id/review_4"
+                   android:layout_width="@dimen/dp_15"
+                   android:layout_height="@dimen/dp_15"
+                   android:background="@drawable/review_star"
+                   android:paddingEnd="@dimen/dp_3"
+                   android:paddingStart="@dimen/dp_3" />
+
+               <ImageView
+                   android:id="@+id/review_5"
+                   android:layout_width="@dimen/dp_15"
+                   android:layout_height="@dimen/dp_15"
+                   android:background="@drawable/review_star"
+                   android:paddingEnd="@dimen/dp_3"
+                   android:paddingStart="@dimen/dp_3" />
+           </LinearLayout>
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/tv_review_date"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/dp_5"
+           android:text="23-07-2018"
+           android:textColor="@color/black"
+           android:textSize="@dimen/sp_12" />
+
+       <TextView
+           android:id="@+id/tv_reviewed_content"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:text="Hello!It is my first review"
+           android:textColor="@color/black"
+           android:textSize="@dimen/sp_12" />
+
+   </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewimagerecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

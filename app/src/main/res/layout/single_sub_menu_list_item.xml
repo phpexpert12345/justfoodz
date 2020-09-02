@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_2"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:weightSum="3"
+           >
+
+
+            <TextView
+                android:id="@+id/tv_menu_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.2"
+                android:gravity="start"
+                android:text="Traditional Fish &amp; CHIPS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_from"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="@dimen/dp_25"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginEnd="@dimen/dp_10"-->
+            <!--android:layout_weight="0.3"-->
+            <!--android:gravity="end"-->
+            <!--android:text="From"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/sp_12" />-->
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/llminusplus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_25"
+                android:focusable="false"
+                android:layout_weight="0.8">
+
+                <TextView
+                    android:id="@+id/txtminussingle"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center"
+                    android:background="@color/LightGreenColor"
+                    android:gravity="center"
+                    android:text="-"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtvaluesingle"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtplussingle"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center"
+                    android:background="@color/LightGreenColor"
+                    android:gravity="center"
+                    android:text="+"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_plus"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_gravity="center"
+                android:background="@color/LightGreenColor"
+                android:gravity="center"
+                android:text="+"
+                android:focusable="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_3">
+
+
+            <TextView
+                android:id="@+id/tv_restaurant_pizza_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_item_cost"
+                android:text="Roasted sliced chicken breast cooked with sauces &amp; mixed pepper served with Arabic salad.Served"
+                android:textColor="@color/darkGreyColor"
+                android:textSize="@dimen/sp_10" />
+
+
+            <TextView
+                android:id="@+id/tv_item_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="8.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

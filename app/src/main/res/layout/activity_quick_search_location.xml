@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Your Location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:background="@drawable/navigration">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="Good choice! Please enter a city to view"
+                android:textColor="#8d8d8d"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/servicename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="ghhjk"
+                    android:textColor="#8d8d8d"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="in your area"
+                    android:textColor="#8d8d8d"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/citydialog"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/whiterectangle">
+
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:backgroundTint="#00000000"
+                    android:gravity="center|start"
+                    android:hint="Select City"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/selectcity"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/search_tab"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lllocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/edt_passCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:backgroundTint="#9b9898"
+                    android:hint="LOCALITY"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColorHint="#8d8d8d"
+                    android:textSize="14sp" />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/location_icons" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/placedialog"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/whiterectangle"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/edt_placesearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:backgroundTint="#00000000"
+                    android:gravity="center|start"
+                    android:hint="Select City"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/search_tab"></ImageView>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/tv_search_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Search"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Apply Coupon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:orientation="vertical"
+        android:background="#F4F9FD">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_weight=".3">-->
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/dp_80">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center">-->
+
+                    <!--<EditText-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="Enter Coupon Code"-->
+                        <!--android:layout_weight=".1"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:backgroundTint="@color/colorPrimary"-->
+                        <!--android:gravity="center"/>-->
+
+
+                <!--</LinearLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".1"
+            android:layout_marginTop="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/couponrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_weight=".3"-->
+            <!--android:gravity="center">-->
+
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:background="@color/Green"-->
+                <!--android:text="Apply Coupon"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="16sp"/>-->
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:backgroundTint="@color/white"
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scanner"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/l"
+        android:layout_below="@id/toolbar_top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp">
+        <TextView
+            android:textAlignment="center"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:text="Align the Bar code with in\nthe frame  to scan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp" />
+
+    </LinearLayout>
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/scanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_below="@+id/l" />
+
+    <Button
+        android:layout_below="@id/scanner"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:text="@string/scan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp" />
+
+</RelativeLayout>

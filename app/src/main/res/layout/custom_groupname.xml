@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layoutCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorPrimary">
+
+
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/etCoupan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Add Group Name"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/groupname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:hint="Enter Group Name"
+             android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/sp_15" />
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+             android:layout_marginBottom="@dimen/dp_5">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                  android:layout_weight="1"
+                android:background="#696565"
+                android:text="Submit"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_18" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#696565"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/sp_18" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

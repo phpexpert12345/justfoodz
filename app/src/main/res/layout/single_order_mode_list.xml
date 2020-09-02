@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_order_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/dp_3"
+        android:text="Your Order Mode"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_below="@+id/tv_order_mode">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/LightGreenColor"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:text="Collection"
+            android:textSize="@dimen/sp_18" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

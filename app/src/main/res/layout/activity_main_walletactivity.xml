@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.MyAccountActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+         android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:background="@drawable/transection_icons"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+            <LinearLayout
+                android:id="@+id/mywallet"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/my_wallet"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Add Money to Wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/digitalwallet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_15"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/digital_wallet"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Digital Wallet Card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/payviawalletid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_15"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/pay_drawer"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Pay via Wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/scanqrcode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_15"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/qr_code"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Scan QR Code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/transactionreport"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_15"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/policy"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Transaction Report"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llchangepin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_15"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_white">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/walletcpin"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:text="Re-set Your Wallet Pin Number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1.8"
+                    android:layout_marginStart="@dimen/dp_5"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    android:layout_centerInParent="true"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rv_extra_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnAdd"
+        android:layout_margin="@dimen/dp_3"
+        android:layout_below="@+id/rl_header" />
+
+    <ExpandableListView
+        android:visibility="gone"
+        android:id="@+id/lvExp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnAdd"
+        android:layout_margin="@dimen/dp_3"
+        android:layout_below="@+id/rl_header"
+        android:groupIndicator="@null"
+        android:childDivider="#fff"
+        />
+
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/light_green_background"
+        android:text="Add"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_15"
+        android:visibility="visible" />
+
+</RelativeLayout>

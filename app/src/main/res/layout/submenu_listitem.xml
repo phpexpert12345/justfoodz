@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_2"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       android:layout_margin="10dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/categoryimage"
+                android:layout_width="80dp"
+                 android:layout_height="@dimen/dp_80"
+                android:src="@drawable/noimagecircle"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:orientation="vertical"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_menu_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.2"
+                    android:gravity="start"
+                    android:text="Traditional Fish &amp; CHIPS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout">
+
+
+                <TextView
+                    android:id="@+id/tv_restaurant_pizza_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLength="75"
+                     android:text="Roasted sliced chicken breast cooked with sauces &amp; mixed pepper served with Arabic salad.Served"
+                    android:textColor="@color/darkGreyColor"
+                    android:textSize="@dimen/sp_10" />
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+           <LinearLayout
+               android:layout_width="70dp"
+               android:layout_height="@dimen/dp_25"
+               android:background="@drawable/greenprice"
+               android:layout_margin="5dp"
+               android:gravity="center">
+
+               <TextView
+                   android:id="@+id/tv_item_cost"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="8.00"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/sp_14" />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="5dp">
+
+               <LinearLayout
+                    android:visibility="gone"
+                   android:id="@+id/llminusplus"
+                   android:layout_width="0dp"
+                   android:layout_height="@dimen/dp_25"
+                   android:focusable="false"
+                   android:layout_weight="0.8">
+
+                   <TextView
+                       android:id="@+id/txtminussingle"
+                       android:layout_width="@dimen/dp_25"
+                       android:layout_height="@dimen/dp_25"
+                       android:layout_gravity="center"
+                       android:background="@color/LightGreenColor"
+                       android:gravity="center"
+                       android:text="-"
+                       android:focusable="false"
+                       android:textColor="@color/white"
+                       android:textSize="@dimen/sp_18"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/txtvaluesingle"
+                       android:layout_width="@dimen/dp_25"
+                       android:layout_height="@dimen/dp_25"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:text=""
+                       android:focusable="false"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/sp_18"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/txtplussingle"
+                       android:layout_width="@dimen/dp_25"
+                       android:layout_height="@dimen/dp_25"
+                       android:layout_gravity="center"
+                       android:background="@color/LightGreenColor"
+                       android:gravity="center"
+                       android:text="+"
+                       android:focusable="false"
+                       android:textColor="@color/white"
+                       android:textSize="@dimen/sp_18"
+                       android:textStyle="bold" />
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/tv_plus"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dp_25"
+                   android:layout_gravity="center"
+                   android:background="@drawable/redboundry"
+                   android:gravity="center"
+                   android:text="Add"
+                   android:focusable="false"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="@dimen/sp_14"
+                   android:textStyle="bold"/>
+           </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

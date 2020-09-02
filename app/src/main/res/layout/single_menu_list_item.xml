@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_menu_category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traditional Fish &amp; CHIPS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_below="@+id/rl_menu"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/greyColor" />
+
+</RelativeLayout>

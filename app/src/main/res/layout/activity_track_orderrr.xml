@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:id="@+id/rl_back"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.2"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track Rider"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:layout_marginStart="90dp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_NextTrip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1.2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:background="#484747"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/txtriderinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="@dimen/dp_5"
+            android:layout_margin="@dimen/dp_3"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#00000000"
+            android:weightSum="3"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:background="@drawable/noorder"
+                    android:id="@+id/driverpic"
+                   android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/driver_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_below="@+id/driver_name"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/callbuttongreen"
+                    android:layout_margin="5dp"
+                    android:id="@+id/phonecall"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

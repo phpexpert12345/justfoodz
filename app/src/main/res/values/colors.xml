@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D8070C</color>
+    <color name="toolbar">#CE0B10</color>
+    <color name="colorPrimaryDark">#F53737</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorRed">#CE1915</color>
+    <color name="yellow">#EDDA74</color>
+    <color name="white">#fff</color>
+    <color name="colorWhiteless">#CECECE</color>
+    <color name="gray">#e8e8e8</color>
+    <color name="btnbg">#B71C1C</color>
+    <color name="editborder">#f0f0f0</color>
+    <color name="whitetrans">#e6ffff</color>
+    <color name="transbghome">#4d000000</color>
+    <color name="exptxt">#b4c483</color>
+    <color name="expbg">#f6f6f6</color>
+    <color name="expname">#4a4f83</color>
+    <color name="ordertypetxt">#38ab00</color>
+    <color name="rdview">#c7c7c7</color>
+    <color name="view">#e8e8e8</color>
+    <color name="colortext">#807e7e</color>
+    <color name="unselectbtn">#fab667</color>
+    <color name="selectbtn">#cdf0cb</color>
+    <color name="whitetransp">#E6ffffff</color>
+    <color name="colorbottomitem">#f0f0f0</color>
+    <color name="honeydew">#F0FFF0</color>
+    <color name="darkgreen">#147708</color>
+    <color name="menubg">#DD6060</color>
+    <color name="menubg1">#FE642E</color>
+    <color name="menubg2">#29a8b7</color>
+    <color name="menubg3">#3fb777</color>
+    <color name="menubgscreen">#f1f1f1</color>
+    <color name="redtrans">#66FF0000</color>
+    <color name="orange">#ff6600</color>
+    <color name="green">#449d44</color>
+    <color name="greenColor">#D8070C</color>
+    <color name="greenLightColor">#D8070C</color>
+    <color name="greyColor">#eeeeee</color>
+    <color name="darkGreyColor">#656565</color>
+    <color name="blueColor">#26ACE1</color>
+    <color name="blue">#2A4EA0</color>
+    <color name="black">#000</color>
+    <color name="belowline_color">#B5B4B4</color>
+
+    <color name="redColor">#DD6060</color>
+    <color name="Green">#6AB309</color>
+    <color name="grayColor">#d4d4d4</color>
+    <color name="LightGreenColor">#6AB309</color>
+    <color name="lightGray">#4D000000</color>
+    <color name="orangeColor">#F7931E</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <color name="dot_dark_screen1">#d3d3d3</color>
+    <color name="dot_dark_screen2">#d3d3d3</color>
+    <color name="dot_dark_screen3">#d3d3d3</color>
+    <color name="dot_dark_screen4">#d3d3d3</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#D8070C</color>
+    <color name="dot_light_screen2">#D8070C</color>
+    <color name="dot_light_screen3">#D8070C</color>
+    <color name="dot_light_screen4">#D8070C</color>
+
+    <color name="color_lighteGray">#E8E9E8E8</color>
+
+</resources>

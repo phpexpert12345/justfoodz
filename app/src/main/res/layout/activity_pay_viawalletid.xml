@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Wallet Transfer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/black"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/transection_icons"/>
+
+        <EditText
+            android:id="@+id/walletno"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter Wallet No"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:textColorHint="@color/lightGray"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_white"/>
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter Amount"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/lightGray"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_white"/>
+
+
+        <EditText
+            android:id="@+id/pinnumber"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter Pin Number"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="numberPassword"
+            android:textColorHint="@color/lightGray"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_white"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Submit"
+                android:background="@drawable/rectanglered"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

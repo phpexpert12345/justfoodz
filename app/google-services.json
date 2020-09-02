@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "299206597975",
+    "firebase_url": "https://justfoodz.firebaseio.com",
+    "project_id": "justfoodz",
+    "storage_bucket": "justfoodz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299206597975:android:120532b3dceb8494",
+        "android_client_info": {
+          "package_name": "com.justfoodz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299206597975-1q1f4rd4fn4o1jtel69umnp4mlt4lk0b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsy2xJBZCb6-lb59PfIPOae3-NsSf-Of4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

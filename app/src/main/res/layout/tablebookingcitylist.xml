@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layoutCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:background="#f0f7f8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/etCoupan"
+            android:layout_centerHorizontal="true"
+            android:text="City List"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/txtError"
+            android:background="#e78080"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+
+
+
+            <EditText
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:background="@drawable/rectangle"
+                android:drawableStart="@mipmap/search"
+                android:hint="Search Your City"
+                android:inputType="text"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_15"
+                android:textColorHint="@color/darkGreyColor"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_search"
+            android:layout_above="@+id/layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cityrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

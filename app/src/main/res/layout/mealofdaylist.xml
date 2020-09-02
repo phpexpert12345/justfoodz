@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_260"
+        android:layout_height="270dp"
+        android:layout_margin="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/dealimage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_110"
+                android:scaleType="fitXY"
+                android:background="@drawable/noimage"/>
+
+         <LinearLayout
+             android:id="@+id/layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/dealimage"
+             android:layout_marginRight="5dp"
+             android:layout_marginLeft="@dimen/dp_5">
+
+             <TextView
+                 android:id="@+id/dealname"
+                 android:layout_width="match_parent"
+                 android:layout_weight=".1"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/black"
+                 android:text="@string/calamar"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:layout_marginTop="5dp"/>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight=".14"
+               android:orientation="horizontal"
+               android:gravity="end">
+
+               <TextView
+                   android:id="@+id/dealprice"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorPrimary"
+                   android:text="3000.00"
+                   android:textSize="15sp"
+                   android:textStyle="bold"
+                   android:layout_marginTop="5dp"/>
+
+               <TextView
+                   android:id="@+id/dealdiscountamount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorPrimary"
+                   android:text="3% Off"
+                   android:layout_marginLeft="7dp"
+                   android:gravity="center"
+                   android:layout_marginTop="5dp"
+                   android:textSize="12sp"/>
+           </LinearLayout>
+
+
+         </LinearLayout>
+
+            <TextView
+                android:id="@+id/dealdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8d8d"
+                 android:text="ghaziabad noida"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/layout"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="10dp"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/la"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/dealdescription"
+                android:background="#f0f0f0"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/restraurantimagege"
+                    android:layout_width="50dp"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shushi_image"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/drestraurantname"
+                        android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                        android:textColor="@color/colortext"
+                        android:text="@string/calamar"
+                        android:textSize="14sp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp">
+
+               <ImageView
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:background="@drawable/cycle"/>
+
+               <TextView
+                   android:id="@+id/pickuptime"
+                   android:layout_width="match_parent"
+                   android:layout_weight=".1"
+                   android:layout_marginStart="5dp"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colortext"
+                   android:text="5-30mins"
+                   android:textSize="13sp" />
+
+               <ImageView
+                   android:layout_width="18dp"
+                   android:layout_height="18dp"
+                   android:background="@drawable/bag"/>
+
+               <TextView
+                   android:id="@+id/delieverytime"
+                   android:layout_width="match_parent"
+                   android:layout_weight=".1"
+                   android:layout_marginStart="5dp"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colortext"
+                   android:text="5-30mins"
+                   android:textSize="13sp" />
+
+           </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/ordernow"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/la"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:text="Order Now"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

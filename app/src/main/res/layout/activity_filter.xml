@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Filter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F4F9FD">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Most Popular"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/whiterectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+
+
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Your restraurant"
+                    android:layout_weight=".1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="15dp"
+                    android:backgroundTint="#00000000"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/search"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Kid Friendly Available"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Pet Friendly Available"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Delivery Available"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Feature Restraurants"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Justfoodz/Collection Available"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Book A Table Available"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".11"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Cash Payment Only"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Online Payment Only"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Cuisine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/whiterectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Your restraurant"
+                    android:layout_weight=".1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="15dp"
+                    android:backgroundTint="#00000000"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/search"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="All"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Sushi"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Seafood"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="American"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Pasta"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Pizza"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Features &amp; Amenities"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/whiterectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Your restraurant"
+                    android:layout_weight=".1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="15dp"
+                    android:backgroundTint="#00000000"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/search"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Cigar Bar"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Happy Hour"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Live Entertainment"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                     android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Outdoor Dining"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Poolside Dining"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Sea View"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Valet Parking"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Wi-Fi"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Serving"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/whiterectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Your restraurant"
+                    android:layout_weight=".1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="15dp"
+                    android:backgroundTint="#00000000"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/search"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Breakfast"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".10"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Dinner"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".10"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Fine Dining"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                     android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Lunch"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Dress Code"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/whiterectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search Your restraurant"
+                    android:layout_weight=".1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="15dp"
+                    android:backgroundTint="#00000000"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/search"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Casual"
+                    android:textSize="13sp"
+                    android:textColor="#8d8d8d"
+                    android:layout_weight=".10"
+                    android:gravity="center"
+                    android:background="@drawable/whiterectangle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Formal Dress"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".10"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Jacket Required"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Smart Casual"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_weight=".1"
+                    android:textColor="#8d8d8d"
+                    android:background="@drawable/whiterectangle"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

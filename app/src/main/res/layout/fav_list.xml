@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_restaurant_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_4"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/liner_new"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginLeft="-32dp">
+
+                <ImageView
+                    android:id="@+id/tv_item_order_status"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@+id/liner_new">
+
+                <ImageView
+                    android:id="@+id/imgfav"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@drawable/redheart"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:background="@drawable/sharelist"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_below="@+id/liner_new">
+
+
+                <LinearLayout
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rectangle_white"
+                    android:layout_marginEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_restaurant_logo"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/restaurant_logo" />
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_toEndOf="@+id/image">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FOUR SEASONS"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_15" />
+
+                    <LinearLayout
+                        android:id="@+id/review_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/tv_restaurant_name"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp">
+
+                        <ImageView
+                            android:id="@+id/review_1"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/review_star"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3" />
+
+                        <ImageView
+                            android:id="@+id/review_2"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/review_star"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3" />
+
+                        <ImageView
+                            android:id="@+id/review_3"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/review_star"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3" />
+
+                        <ImageView
+                            android:id="@+id/review_4"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/review_star"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3" />
+
+                        <ImageView
+                            android:id="@+id/review_5"
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_15"
+                            android:background="@drawable/review_star"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_restaurant_minimum_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@+id/review_layout">
+
+                        <TextView
+                            android:id="@+id/tv_restaurant_minimum_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min.Order :"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_restaurant_min_order_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_3"
+                            android:layout_toEndOf="@+id/tv_restaurant_minimum_order"
+                            android:text="3.00"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/tv_item_discount_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/tv_item_discount"
+                            android:text="20"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_item_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:text="% off"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/sp_15"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_item_order_status"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/rl_restaurant_minimum_order"-->
+                    <!--android:layout_marginEnd="@dimen/dp_10"-->
+                    <!--android:layout_marginTop="@dimen/dp_5">-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/tv_item_order_status"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Preorder"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/redColor"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="@dimen/sp_12"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_layout"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/review_star"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingEnd="@dimen/dp_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingStart="@dimen/dp_3" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/review_star"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingEnd="@dimen/dp_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingStart="@dimen/dp_3" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/review_star"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingEnd="@dimen/dp_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingStart="@dimen/dp_3" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_4"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/review_star"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingEnd="@dimen/dp_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingStart="@dimen/dp_3" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/review_5"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="@dimen/dp_15"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/review_star"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingEnd="@dimen/dp_3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:paddingStart="@dimen/dp_3" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+                    <!--</RelativeLayout>-->
+                    <RelativeLayout
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_restaurant_minimum_order"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_2">
+
+                        <TextView
+                            android:id="@+id/tv_restaurant_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="70-80 Crabtree Lane,BN15 9PJ,Lancing."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_12" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/address"
+                        android:orientation="horizontal"
+                        android:layout_margin="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight=".1">
+
+                            <ImageView
+                                android:id="@+id/kidred"
+                                android:layout_width="@dimen/dp_15"
+                                android:layout_height="@dimen/dp_15"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/cancelred"/>
+
+                            <ImageView
+                                android:id="@+id/kidgreen"
+                                android:layout_width="@dimen/dp_15"
+                                android:layout_height="@dimen/dp_15"
+                                android:layout_marginTop="3dp"
+                                android:visibility="gone"
+                                android:background="@drawable/greenryt"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kid Friendly"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight=".1">
+
+                            <ImageView
+                                android:id="@+id/petred"
+                                android:layout_width="@dimen/dp_15"
+                                android:layout_height="@dimen/dp_15"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/cancelred"/>
+                            <ImageView
+                                android:id="@+id/petgreen"
+                                android:layout_width="@dimen/dp_15"
+                                android:layout_height="@dimen/dp_15"
+                                android:layout_marginTop="3dp"
+                                android:visibility="gone"
+                                android:background="@drawable/greenryt"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pet Friendly"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="5dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/h"
+                android:orientation="horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".11">
+
+                    <ImageView
+                        android:id="@+id/deliverynotcheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/cancelred"/>
+
+                    <ImageView
+                        android:id="@+id/deliverycheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:background="@drawable/greenryt"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".1">
+
+                    <ImageView
+                        android:id="@+id/collectionnotcheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/cancelred"/>
+                    <ImageView
+                        android:id="@+id/collectioncheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:background="@drawable/greenryt"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Collection"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".11">
+
+                    <ImageView
+                        android:id="@+id/dininnotcheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/cancelred"/>
+
+                    <ImageView
+                        android:id="@+id/dinincheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:background="@drawable/greenryt"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dine In"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".1">
+
+                    <ImageView
+                        android:id="@+id/booktablenotcheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/cancelred"/>
+
+                    <ImageView
+                        android:id="@+id/booktablecheck"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:background="@drawable/greenryt"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Book a Table"
+                        android:textSize="13sp"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

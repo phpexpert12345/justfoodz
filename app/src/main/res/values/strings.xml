@@ -1,0 +1,242 @@
+<resources>
+    <string name="app_name">Justfoodz</string>
+    <string name="back">BACK</string>
+    <string name="login">Login</string>
+    <string name="login_txt">Enter your email and password to login.</string>
+    <string name="email_txt">Email</string>
+    <string name="pwd_txt">Password</string>
+    <string name="forgot_pwd_txt">Forgot Password ?</string>
+    <string name="sign_with_fb">Sign in with Facebook</string>
+    <string name="search_txt">Search</string>
+    <string name="sign_up_create_account">Create an account</string>
+    <string name="enter_passcode">Please enter valid full postcode</string>
+    <string name="home_message">Order Your Food, Get Your Discount,Every Time!</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="vieww_more">…View More</string>
+    <string name="MAP_API_KEY">AIzaSyDNyevW_K3I8Nk_6Rg6jntytgi0W0rNu58</string>
+
+    <!--Before Login Item-->
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_login">Login</string>
+    <string name="nav_item_register">Register</string>
+    <string name="nav_item_term_cond">Terms &amp; Conditions</string>
+    <string name="nav_item_faq">FAQ</string>
+    <string name="nav_item_location">Location</string>
+    <string name="action_search">search</string>
+
+    <!--After Login-->
+
+    <string name="nav_item_my_account">My Account</string>
+    <string name="nav_item_my_order">My Order</string>
+    <string name="nav_item_setting">Profile Setting</string>
+    <string name="nav_item_change_pwd">Change Password</string>
+    <string name="nav_item_track_order">Track Order</string>
+    <string name="nav_item_order_issue">Order Issue</string>
+    <string name="nav_item_logout">Logout</string>
+
+
+    <string name="exitApp">Are you sure you want to exit?</string>
+    <string name="OK">OK</string>
+    <string name="apply">Apply</string>
+    <string name="create_account">Create Account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name_txt">Last Name</string>
+    <string name="phone_number_txt">Phone Number</string>
+    <string name="sign_up_txt">Register</string>
+    <string name="already_account">Already have an account?Log in</string>
+    <string name="terms_cond_txt">By creating an Account you agree to our Terms &amp; Conditions. </string>
+    <string name="forgot_pwd">Forgot Password</string>
+    <string name="help">Help &amp; Support</string>
+    <string name="submit_txt">Submit</string>
+    <string name="went_wrong">Something went wrong try again</string>
+
+
+    <string-array name="navigation_drawer_items_array">
+
+        <!--Before Login Item-->
+
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_login</item>
+        <item>@string/nav_item_register</item>
+        <item>@string/nav_item_term_cond</item>
+        <item>@string/nav_item_faq</item>
+        <item>@string/nav_item_location</item>
+
+        <!--After Login Item -->
+
+        <item>@string/nav_item_my_account</item>
+        <item>@string/nav_item_my_order</item>
+        <item>@string/nav_item_setting</item>
+        <item>@string/nav_item_change_pwd</item>
+        <item>@string/nav_item_track_order</item>
+        <item>@string/nav_item_order_issue</item>
+        <item>@string/nav_item_logout</item>
+
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name_txt">Justfoodz</string>
+    <string name="search_restaurant">Search Restaurants</string>
+    <string name="select_cuisines">Select Your Cuisines</string>
+    <string name="search_cuisines">Search Cuisines</string>
+    <string name="update_profile_txt">Update Profile</string>
+    <string name="floor_txt">Building/House Number</string>
+    <string name="street_name_txt">Enter Complete Address e.g. Street/House Number, City Name and Country Name</string>
+    <string name="zipcode_txt">Postcode</string>
+    <string name="city_txt">Town/City</string>
+    <string name="state_txt">State</string>
+    <string name="menu_txt"> Food Menu</string>
+    <string name="information">Info</string>
+    <string name="review_txt">Drink Menu</string>
+    <string name="cart_txt">Cart</string>
+    <string name="categories_cui_txt">Categories/Cuisines :</string>
+    <string name="schedule">Schedlue :</string>
+    <string name="about_txt">About</string>
+    <string name="cart_details_txt">Cart Details</string>
+    <string name="checkout_txt">Checkout</string>
+    <string name="add">ADD Items</string>
+    <string name="address_name_txt">Address Title e.g Office, Home etc</string>
+    <string name="street_number_txt">Street Number</string>
+    <string name="country_txt">Country/Region</string>
+    <string name="uk_txt">Country</string>
+    <string name="complete_profile_txt">Complete Profile</string>
+    <string name="thank_you_msg">Thank you for your order</string>
+    <string name="order_msg">Your order number is:</string>
+    <string name="order_placed_msg">Order placed at:</string>
+    <string name="go_to_home_txt">Go to Home</string>
+    <string name="print_order_txt">Print Order</string>
+    <string name="coming_soon_txt">Coming soon</string>
+    <string name="payment_txt">Payment</string>
+    <string name="credit_debit_card_txt">Credit/Debit Card</string>
+    <string name="pay_via_txt">Pay Via</string>
+    <string name="coupon_code_txt">Apply coupon code if you have</string>
+    <string name="total_pay_txt">Total Pay :</string>
+    <string name="pay_confirm_txt">Pay &amp; Confirm</string>
+    <string name="enter_passcode_txt">Please enter your postcode</string>
+    <string name="enter_email">Enter your  valid email</string>
+    <string name="enter_pwd">Enter your password</string>
+    <string name="internet">Please Connect to Internet</string>
+    <string name="empty_list">Restaurant list are empty</string>
+
+    <string name="enter_phone_number_txt">Enter phone number</string>
+    <string name="valid_email_txt">valid email address</string>
+    <string name="invalid_email_txt">Invalid email address</string>
+    <string name="my_account_txt">My Account</string>
+    <string name="my_order_txt">My Order</string>
+    <string name="profile_setting_txt">Profile Setting</string>
+    <string name="change_pwd_txt">Change Password</string>
+    <string name="track_order_txt">Track Status</string>
+    <string name="order_issue_txt">Issues with your Order?</string>
+    <string name="old_pwd_txt">Old Password</string>
+    <string name="new_pwd_txt">New Password</string>
+    <string name="confirm_pwd_txt">Confirm Password</string>
+    <string name="confirm_txt">Confirm ?</string>
+    <string name="quantity_txt">Quantity</string>
+    <string name="dish_name_txt">Dish Name</string>
+    <string name="price_txt">Price</string>
+    <string name="track_order_hint_txt">Enter Order No.</string>
+    <string name="enter_order_no_txt">Enter your Order number</string>
+    <string name="enter_order_issue_txt">Enter order issue</string>
+    <string name="order_issue_reason_txt">"We encourage great reviews! If it was great, tell the world; if it was not so good, tell us by sending a personal message so we can help improve the customer experience at the restaurant. A great review includes the name of the dish, your experience as well as a comment on the service."
+</string>
+    <string name="track_order">Track Order</string>
+    <string name="order_issue">Order Issue</string>
+    <string name="reviwe_rating_txt">Review &amp; Rating></string>
+    <string name="publish_review_txt">Publish Review</string>
+    <string name="write_review_txt">Write A Review</string>
+    <string name="enter_old_pwd">Enter old password</string>
+    <string name="enter_new_pwd">Enter new pwd</string>
+    <string name="enter_new_confirm_pwd">Enter your new confirm password</string>
+    <string name="order_tracking_txt">Order Tracking</string>
+    <string name="enter_order_number_txt">Enter order number</string>
+    <string name="enter_floor_txt">Please enter building/House number</string>
+    <string name="enter_street_name">Please enter street.</string>
+    <string name="enter_country">Please enter Country/Region.</string>
+    <string name="enter_zip_code">Please enter zip code.</string>
+    <string name="enter_city_txt">Please enter city.</string>
+    <string name="enter_user_street_txt">Pleas enter state.</string>
+    <string name="order_detail_txt">Order Details</string>
+    <string name="date_txt">Date</string>
+    <string name="time_txt">Time</string>
+    <string name="order_id_txt">Order ID:</string>
+    <string name="restaurant_details_txt">Restaurant Details:</string>
+    <string name="enter_your_review_txt">Write your review</string>
+    <string name="enter_your_issue_description_txt">Write your issue description</string>
+    <string name="review_rating_txt">Review &amp; Rating</string>
+    <string name="take_out_option_txt">Take Out Options</string>
+    <string name="empty_txt_msg">No Items Found in Cart,Please add items.</string>
+    <string name="empty_cart_msg">Cart is empty,please add item in cart.</string>
+    <string name="cash_payment_txt">Cash Payment</string>
+    <string name="add_item_msg">Please add more item.</string>
+    <string name="house_no_txt">Building/House Number</string>
+    <string name="postcode_txt">Postcode</string>
+    <string name="selectAddress_txt">Select Address</string>
+    <string name="continue_txt">Continue...</string>
+    <string name="take_out_option_msg_txt">Please select take out options</string>
+    <string name="payment_type_msg_txt">Please select the payment mode</string>
+    <string name="select_address_txt">Please select your address</string>
+    <string name="my_address_txt">My Address</string>
+    <string name="my_addresss_txt">My Address</string>
+    <string name="user_address_txt">My Address</string>
+    <string name="show_map_txt">Show in Map</string>
+    <string name="restaurant_location_txt">Restaurant Location</string>
+    <string name="enter_first_name">Enter your first name</string>
+    <string name="enter_last_name">Enter your last name</string>
+    <string name="Exit">Exit</string>
+    <string name="Confirmation">Confirmation</string>
+    <string name="Check_login">Check your registration</string>
+    <string name="loginSuccess">Logged in successfully</string>
+    <string name="thank_yo">Thank you !</string>
+    <string name="faq_txt">FAQ\'s</string>
+    <string name="enter_user_country_txt">Please enter country.</string>
+    <string name="enter_address_label_txt">Please enter address label</string>
+    <string name="terms_cond_header_txt">Terms of Conditions</string>
+    <string name="Enteryour_coupancode">Enter your coupon code</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_profile_txt">Edit Profile</string>
+    <string name="address_delete_txt">Do you want to delete address</string>
+    <string name="ok">Ok</string>
+    <string name="allergies_txt">Any Allergies ?</string>
+    <string name="enter_allergies_txt">Allergies</string>
+    <string name="done">Done</string>
+
+
+    <string name="last">Last Name</string>
+    <string name="email">First Name</string>
+    <string name="phone">First Name</string>
+    <string name="no_of_items">No of Items</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <string name="calamar">Calamar Fish &amp; Chips</string>
+
+
+    <string name="points">100 points</string>
+    <string name="pointsa">200 points</string>
+    <string name="pointsb">300 points</string>
+    <string name="pointsc">400 points</string>
+    <string name="pointsd">500 points</string>
+    <string name="landmark_optional">Delivery Instructions(Optional)</string>
+    <string name="about_us">About Us</string>
+    <string name="add_current_address">Current Address</string>
+    <string name="save_as_current_location">Save as Location</string>
+    <string name="please_wait">Please Wait..</string>
+    <string name="enter_email_txt">Enter email id</string>
+    <string name="stripe">Stripe Payment</string>
+    <string name="pay_by_credit">Pay By Credit/Debit Card</string>
+    <string name="scanner">Scanner</string>
+    <string name="scan">Scan</string>
+    <string name="invalid_card">Please enter card number and expiry date and cvv number</string>
+
+
+    <string name="search_your_favorite_restaurant">Search For Your Favorite Restaurant</string>
+
+
+</resources>

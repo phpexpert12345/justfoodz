@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grayColor"
+    tools:context=".activities.SelectAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/selectAddress_txt"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_add_new_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Save Location"
+        android:layout_below="@+id/rl_header"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@+id/tv_add_new_address"
+        android:background="@color/white">
+
+        <RadioButton
+            android:id="@+id/rbcurrent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_weight="0.3"
+            android:focusable="false"
+            android:buttonTint="@color/LightGreenColor"
+            android:checked="false" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tv_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="Use Current Location"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/txtcurrentaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text=""
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="10dp"
+                android:textSize="@dimen/sp_14" />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_edit_address"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lll"
+        android:layout_above="@+id/tv_continue"
+        android:layout_margin="@dimen/dp_3"
+        android:scrollbars="none"
+        android:background="@color/greyColor"/>
+
+    <TextView
+        android:id="@+id/tv_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/light_green_background"
+        android:gravity="center"
+        android:text="Continue &amp; Checkout"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+</RelativeLayout>
