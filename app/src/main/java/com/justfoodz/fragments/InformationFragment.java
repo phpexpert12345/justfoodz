@@ -135,6 +135,7 @@ public class InformationFragment extends Fragment implements View.OnClickListene
                 Address address = addresses.get(0);
                 longitude = address.getLongitude();
                 latitude = address.getLatitude();
+                
 
                 System.out.println("====== lat 1: " + latitude + " " + "long 1: " + longitude);
                 Intent i = new Intent(getActivity(), RestaurantLocationActivity.class);
