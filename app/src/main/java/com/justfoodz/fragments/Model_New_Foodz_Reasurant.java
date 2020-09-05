@@ -1,12 +1,12 @@
 package com.justfoodz.fragments;
 
-import com.justfoodz.models.RestaurantFreeDeliveryModel;
+
 import com.justfoodz.models.RestaurantModel;
-import com.justfoodz.models.SubList.RestaurantMencategory;
+import com.justfoodz.models.RestaurantNewFoodzModel;
 
 import java.util.ArrayList;
 
-public class Model_Free_Delivery_Reasurant {
+public class Model_New_Foodz_Reasurant {
 
     public ArrayList<RestaurantModel> getSearchResult() {
         return searchResult;

@@ -34,8 +34,12 @@ import com.justfoodz.fragments.Model_CuisiineDisplay;
 import com.justfoodz.fragments.Model_FeaturePartnerModel;
 import com.justfoodz.fragments.Model_Free_Delivery_Reasurant;
 import com.justfoodz.fragments.Model_MealDealList;
+import com.justfoodz.fragments.Model_Must_Try_Reasurant;
+import com.justfoodz.fragments.Model_National_Brands_Reasurant;
+import com.justfoodz.fragments.Model_New_Foodz_Reasurant;
 import com.justfoodz.fragments.Model_Reasurant;
 import com.justfoodz.fragments.Model_RestaurantMenuCategory;
+import com.justfoodz.fragments.Model_Special_Offer_Reasurant;
 import com.justfoodz.fragments.Model_feature_restaurant_List;
 import com.justfoodz.fragments.RestaurantMencategoryArray;
 import com.justfoodz.models.MenuModel;
@@ -114,6 +118,8 @@ public interface InterUserdata {
     @GET("phpexpert_quick_food_type.php")
     Call<Model_FeaturePartnerModel> FoodTypeQuickSearch();
 
+    @GET("phpexpert_home_cuisine_display.php")
+    Call<Model_National_Brands_Reasurant> NationalBrandsSearch();
 
     @FormUrlEncoded
     @POST("phpexpert_popular_restaurant.php")
@@ -121,10 +127,24 @@ public interface InterUserdata {
                                                @Field("customer_lat") String customer_lat, @Field("customer_long") String customer_long);
 
     @FormUrlEncoded
-    @POST("phpexpert_popular_restaurant.php")
+    @POST("phpexpert_free_delivery_restaurant.php")
     Call<Model_Free_Delivery_Reasurant> hitURLforFreeDelivery(@Field("customer_country") String customer_country, @Field("customer_city") String customer_city,
                                                @Field("customer_lat") String customer_lat, @Field("customer_long") String customer_long);
 
+    @FormUrlEncoded
+    @POST("phpexpert_new_restaurant.php")
+    Call<Model_New_Foodz_Reasurant> hitURLforNewFoodz(@Field("customer_country") String customer_country, @Field("customer_city") String customer_city,
+                                                              @Field("customer_lat") String customer_lat, @Field("customer_long") String customer_long);
+
+    @FormUrlEncoded
+    @POST("phpexpert_discount_restaurant.php")
+    Call<Model_Special_Offer_Reasurant> hitURLforSpecialOffer(@Field("customer_country") String customer_country, @Field("customer_city") String customer_city,
+                                                          @Field("customer_lat") String customer_lat, @Field("customer_long") String customer_long);
+
+    @FormUrlEncoded
+    @POST("phpexpert_must_try_restaurant.php")
+    Call<Model_Must_Try_Reasurant> hitURLforMustTryRest(@Field("customer_country") String customer_country, @Field("customer_city") String customer_city,
+                                                     @Field("customer_lat") String customer_lat, @Field("customer_long") String customer_long);
 
 
     @FormUrlEncoded

@@ -29,16 +29,29 @@ import java.util.ArrayList;
 
         Context context;
         public static String restaurant_distance_check;
-        ArrayList<RestaurantFreeDeliveryModel> freeDeliveryList;
+        ArrayList<RestaurantModel> freeDeliveryList;
         private AuthPreference authPreference;
         private String City;
+        String replaceStr ="";
+        FreeDeliveryAdapterInterface freeDeliveryAdapterInterface;
 
+        public interface FreeDeliveryAdapterInterface {
+            public void onClickPlaces(ArrayList<RestaurantModel> freeDeliveryList, int pos);
+        }
 
-        public FreeDeliveryAdapter(Context c, ArrayList<RestaurantFreeDeliveryModel> freedeliveryrList, String city) {
-            this.context = c;
-            this.freeDeliveryList = freedeliveryrList;
-            authPreference = new AuthPreference(context);
-            this.City = city;
+        public FreeDeliveryAdapter(Context c, ArrayList<RestaurantModel> freedeliveryrList, String city) {
+           try
+           {
+               this.context = c;
+               this.freeDeliveryList = freedeliveryrList;
+               authPreference = new AuthPreference(context);
+               this.City = city;
+           }
+           catch (Exception ex)
+           {
+               ex.printStackTrace();
+           }
+
         }
 
         @Override
@@ -55,24 +68,45 @@ import java.util.ArrayList;
             holder.cuisinename.setText(freeDeliveryList.get(position).getRestaurant_name());
             Picasso.get().load(freeDeliveryList.get(position).getRestaurant_Logo()).into(holder.cuisineimage);
             holder.miles.setText(freeDeliveryList.get(position).getRestaurant_deliveryDistance());
-            holder.timee.setText(freeDeliveryList.get(position).getRestaurant_avarage_deliveryTime());
+            holder.txt_rating.setText(freeDeliveryList.get(position).getRatingValue());
+
+            holder.timee.setText("(" + freeDeliveryList.get(position).getRestaurant_avarage_deliveryTime() + ")");
+            holder.txt_view_total_review.setText("(" + freeDeliveryList.get(position).getTotalRestaurantReview() + ")");
+            holder.txt_view_preorder.setText(freeDeliveryList.get(position).getRestaurantTimeStatus1());
+            holder.txt_view_minorder.setText("$ " + freeDeliveryList.get(position).getRestaurant_minimumorder() + " Minimum Order");
 
             String YourString = freeDeliveryList.get(position).getRestaurant_address();
 
+            if (freeDeliveryList.get(position).getRestaurantTimeStatus1().equalsIgnoreCase("Preorder") || freeDeliveryList.get(position).getRestaurantTimeStatus1().equalsIgnoreCase("Open"))
+            {
+                holder.txt_view_open_close.setText("Open");
+            }
+            if (freeDeliveryList.get(position).getRestaurantTimeStatus1().equalsIgnoreCase("Closed") || freeDeliveryList.get(position).getRestaurantTimeStatus1().equalsIgnoreCase("Busy"))
+            {
+                holder.txt_view_open_close.setText("Closed");
+            }
 
             holder.featuredaddress.setText(freeDeliveryList.get(position).getRestaurant_address());
+            holder.txt_view_cuisinename.setText(freeDeliveryList.get(position).getRestaurant_cuisine());
 
             Log.e("star", "" + freeDeliveryList.get(position).getRatingValue());
 //           String ratingValue = pp.get(position).getRatingValue();
 //
             if (freeDeliveryList.get(position).getRatingValue().equalsIgnoreCase("0")) {
-                holder.iv_review1.setBackgroundResource(R.drawable.review_star);
+               /* holder.iv_review1.setBackgroundResource(R.drawable.review_star);
                 holder.iv_review2.setBackgroundResource(R.drawable.review_star);
                 holder.iv_review3.setBackgroundResource(R.drawable.review_star);
                 holder.iv_review4.setBackgroundResource(R.drawable.review_star);
-                holder.iv_review5.setBackgroundResource(R.drawable.review_star);
+                holder.iv_review5.setBackgroundResource(R.drawable.review_star);*/
+                holder.rate_star.setBackgroundResource(R.drawable.review_star);
 
-            } else if (freeDeliveryList.get(position).getRatingValue().equalsIgnoreCase("1")) {
+            }
+            else
+            {
+                holder.rate_star.setBackgroundResource(R.drawable.review_yellow);
+
+            }
+            /*else if (freeDeliveryList.get(position).getRatingValue().equalsIgnoreCase("1")) {
                 holder.iv_review1.setBackgroundResource(R.drawable.review_yellow);
                 holder.iv_review2.setBackgroundResource(R.drawable.review_star);
                 holder.iv_review3.setBackgroundResource(R.drawable.review_star);
@@ -106,7 +140,7 @@ import java.util.ArrayList;
                 holder.iv_review3.setBackground(ContextCompat.getDrawable(context, R.drawable.review_yellow));
                 holder.iv_review4.setBackground(ContextCompat.getDrawable(context, R.drawable.review_yellow));
                 holder.iv_review5.setBackground(ContextCompat.getDrawable(context, R.drawable.review_yellow));
-            }
+            }*/
         }
 
         @Override
@@ -116,9 +150,10 @@ import java.util.ArrayList;
 
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            TextView cuisinename, featuredaddress, timee, miles;
+            TextView cuisinename, featuredaddress, timee, miles, txt_view_cuisinename, txt_view_total_review,txt_view_minorder, txt_view_preorder
+                    ,txt_view_open_close, txt_rating;
             ImageView cuisineimage;
-            ImageView ivBack, iv_review1, iv_review2, iv_review3, iv_review4, iv_review5;
+            ImageView ivBack, iv_review1, iv_review2, iv_review3, iv_review4, iv_review5, rate_star;
 
             public ViewHolder(final View itemView) {
                 super(itemView);
@@ -130,8 +165,17 @@ import java.util.ArrayList;
                 iv_review3 = itemView.findViewById(R.id.review_3);
                 iv_review4 = itemView.findViewById(R.id.review_4);
                 iv_review5 = itemView.findViewById(R.id.review_5);
+                rate_star = itemView.findViewById(R.id.rate_star);
+                txt_rating = itemView.findViewById(R.id.txt_rating);
                 miles = itemView.findViewById(R.id.miles);
                 timee = itemView.findViewById(R.id.timee);
+                txt_view_cuisinename = itemView.findViewById(R.id.txt_view_cuisinename);
+                txt_view_total_review = itemView.findViewById(R.id.txt_view_total_review);
+                txt_view_minorder = itemView.findViewById(R.id.txt_view_minorder);
+                txt_view_preorder = itemView.findViewById(R.id.txt_view_preorder);
+                txt_view_open_close = itemView.findViewById(R.id.txt_view_open_close);
+
+
 
                 itemView.setOnClickListener(this);
             }
@@ -139,7 +183,7 @@ import java.util.ArrayList;
             @Override
             public void onClick(View v) {
                 int position = getAdapterPosition();
-
+//                freeDeliveryAdapterInterface.onClickPlaces( freeDeliveryList, position);
 
                 try {
                     if (freeDeliveryList.get(position).getRestaurantTimeStatus1().equals("Closed") || freeDeliveryList.get(position).getRestaurantTimeStatus1().equals("Busy")) {
@@ -155,7 +199,7 @@ import java.util.ArrayList;
 
                         Intent intent = new Intent(context, MainMenuActivity.class);
                         String id = freeDeliveryList.get(position).getId();
-                        RestaurantFreeDeliveryModel restaurantModel = freeDeliveryList.get(position);
+                        RestaurantModel restaurantModel = freeDeliveryList.get(position);
                         authPreference.setRestraurantCity("" + freeDeliveryList.get(position).getRestaurantCity());
 
                         authPreference.setMinprice(freeDeliveryList.get(position).getRestaurant_minimumorder());

@@ -81,6 +81,10 @@ import com.justfoodz.activities.SubMenuActivity;
 import com.justfoodz.activities.TrackGPS;
 import com.justfoodz.adapters.FreeDeliveryAdapter;
 import com.justfoodz.adapters.MyAdapter;
+import com.justfoodz.adapters.NationalBrandsAdapter;
+import com.justfoodz.adapters.NewFoodzAdapter;
+import com.justfoodz.adapters.NewMustTryRestAdapter;
+import com.justfoodz.adapters.SpecialOfferAdapter;
 import com.justfoodz.models.Citymodel;
 import com.justfoodz.models.CuisineModel;
 
@@ -90,6 +94,10 @@ import com.justfoodz.models.PlaceAutoComplete;
 import com.justfoodz.models.PlacePredictions;
 import com.justfoodz.models.RestaurantFreeDeliveryModel;
 import com.justfoodz.models.RestaurantModel;
+import com.justfoodz.models.RestaurantMustTryModel;
+import com.justfoodz.models.RestaurantNatonalBrandsModel;
+import com.justfoodz.models.RestaurantNewFoodzModel;
+import com.justfoodz.models.RestaurantSpecialOfferModel;
 import com.justfoodz.retrofit.InterUserdata;
 import com.justfoodz.retrofit.Model_location;
 import com.justfoodz.retrofit.RetrofitAdapter;
@@ -123,14 +131,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
-    private TextView tvSearch, city, feature, meal, popular, freedelivery;
+    private TextView tvSearch, city, feature, meal, popular, freedelivery, new_on_just_food, must_try_restaurant;
     private EditText edtPassCode;
     private ProgressDialog pDialog, pd, pdialog, progress, pddd;
     private AuthPreference authPreference;
     public static String passCode;
     public ArrayList<RestaurantModel> restaurantModelArrayList;
     public static RestaurantModel restaurantModel;
-    public static RestaurantFreeDeliveryModel restaurantFreeDeliveryModel;
+    public static RestaurantModel restaurantFreeDeliveryModel;
+    public static RestaurantModel restaurantNewFoodzyModel;
+    public static RestaurantModel restaurantMustTryModel;
+    public static RestaurantModel restaurantDpecialOfferModel;
     private Spinner selectcity;
     ArrayList<String> cityArray;
     public static String CITY;
@@ -147,7 +158,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public static String restaurant_distance_check;
 
     public ArrayList<RestaurantModel> restaurantModelArrayListReceived = null;
-    public ArrayList<RestaurantFreeDeliveryModel> restaurantFreeDeliveryModelArrayListReceived = null;
+    public ArrayList<RestaurantModel> restaurantFreeDeliveryModelArrayListReceived = null;
+    public ArrayList<RestaurantModel> restaurantNewOnFoodzModelArrayListReceived = null;
+    public ArrayList<RestaurantModel> restaurantMustTryModelArrayListReceived = null;
+    public ArrayList<RestaurantModel> restaurantSpecialOfferModelArrayListReceived = null;
 
     ///////////banner////////////
     private ViewPager viewPagerslider;
@@ -169,13 +183,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private RecyclerView quickrecycler;
     private ArrayList<FeaturedPartnerModel> quickimageList;
 
+    private ArrayList<RestaurantNatonalBrandsModel> nationalBrandsList;
+
     /////////City recycler///////////
     private RecyclerView cityrecycler;
     private ArrayList<Citymodel> CityList;
     private CITYAdapter cityAdapter;
 
     /////////popular partners///////////
-    private RecyclerView popularnearrecycler, freedeliveryrecycler;
+    private RecyclerView popularnearrecycler, freedeliveryrecycler, newjustfoodzrecycler, musttryrestaurantrecycler, nationalbrandsrecycler, specialofferrecycler;
     private ArrayList<RestaurantModel> popularnearList;
 //    private PopularNearAdapter popularNearAdapter;
 
@@ -221,9 +237,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         freedeliveryrecycler = view.findViewById(R.id.freedeliveryrecycler);
         freedelivery = view.findViewById(R.id.freedelivery);
 
+        newjustfoodzrecycler = view.findViewById(R.id.newjustfoodzrecycler);
+        new_on_just_food = view.findViewById(R.id.new_on_just_food);
+
+        musttryrestaurantrecycler = view.findViewById(R.id.musttryrestaurantrecycler);
+        must_try_restaurant = view.findViewById(R.id.must_try_restaurant);
+
         popularnearrecycler = view.findViewById(R.id.popularnearrecycler);
         popular = view.findViewById(R.id.popular);
 
+        nationalbrandsrecycler = view.findViewById(R.id.nationalbrandsrecycler);
+        specialofferrecycler = view.findViewById(R.id.specialofferrecycler);
         getData();
         Date d = new Date();
         currentdate = DateFormat.format("yyyy-MM-dd", d.getTime());
@@ -267,7 +291,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             HitURLforCuisineDisplay();
             HitURLforPopularNear();
             HitURLforFreeDelivery();
+            HitURLforNewOnJustFoodz();
+            HitURLforMustTryRest();
             HitURLforQuickSearchData();
+            HitURLforNationalBrandsData();
+            HitURLforSpecialOffersData();
 
 
         } else {
@@ -276,6 +304,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         cityArray = new ArrayList<>();
         quickimageList = new ArrayList<>();
+        nationalBrandsList = new ArrayList<>();
         delieveredCuisineList = new ArrayList<>();
         featuredimageList = new ArrayList<>();
         DealsList = new ArrayList<>();
@@ -338,10 +367,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     public void HitURLforFreeDelivery() {
 
-        restaurantFreeDeliveryModelArrayListReceived = new ArrayList<RestaurantFreeDeliveryModel>();
+        restaurantFreeDeliveryModelArrayListReceived = new ArrayList<RestaurantModel>();
         InterUserdata interfaceRetrofit = RetrofitAdapter.createService(InterUserdata.class);
         Call<Model_Free_Delivery_Reasurant> userLoginCall = interfaceRetrofit.hitURLforFreeDelivery(myPref.getState(), myPref.getCity(),
                 myPref.getLatitude(), myPref.getLongitude());
+        System.out.println("==== userlogin : " + userLoginCall.toString());
         userLoginCall.enqueue(new Callback<Model_Free_Delivery_Reasurant>() {
             @Override
             public void onResponse(Call<Model_Free_Delivery_Reasurant> call, retrofit2.Response<Model_Free_Delivery_Reasurant> response) {
@@ -350,7 +380,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     for (int i = 0; i < response.body().getSearchResult().size(); i++) {
                         if (!response.body().getSearchResult().get(i).getError().equalsIgnoreCase("2")) {
 
-                            RestaurantFreeDeliveryModel restaurantFreeDeliveryModel = response.body().getSearchResult().get(i);
+                            RestaurantModel restaurantFreeDeliveryModel = response.body().getSearchResult().get(i);
                             meal.setVisibility(View.VISIBLE);
                             dealsrecycler.setVisibility(View.VISIBLE);
 
@@ -382,6 +412,204 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                 MyProgressDialog.dismiss();
 
+            }
+        });
+
+
+    }
+
+    public void HitURLforNewOnJustFoodz() {
+
+        restaurantNewOnFoodzModelArrayListReceived = new ArrayList<RestaurantModel>();
+        InterUserdata interfaceRetrofit = RetrofitAdapter.createService(InterUserdata.class);
+        Call<Model_New_Foodz_Reasurant> userLoginCall = interfaceRetrofit.hitURLforNewFoodz(myPref.getState(), myPref.getCity(),
+                myPref.getLatitude(), myPref.getLongitude());
+        System.out.println("==== userlogin : " + userLoginCall.toString());
+        userLoginCall.enqueue(new Callback<Model_New_Foodz_Reasurant>() {
+            @Override
+            public void onResponse(Call<Model_New_Foodz_Reasurant> call, retrofit2.Response<Model_New_Foodz_Reasurant> response) {
+                if (response.isSuccessful()) {
+
+                    for (int i = 0; i < response.body().getSearchResult().size(); i++) {
+                        if (!response.body().getSearchResult().get(i).getError().equalsIgnoreCase("2")) {
+
+                            RestaurantModel restaurantFreeDeliveryModel = response.body().getSearchResult().get(i);
+                            meal.setVisibility(View.VISIBLE);
+                            dealsrecycler.setVisibility(View.VISIBLE);
+
+                            HomeFragment.restaurantNewFoodzyModel = restaurantFreeDeliveryModel;
+                            restaurantNewOnFoodzModelArrayListReceived.add(HomeFragment.restaurantNewFoodzyModel);
+
+
+                        }
+                    }
+
+                    if (restaurantNewOnFoodzModelArrayListReceived.size() > 0) {
+                        NewFoodzAdapter newFoodzAdapter = new NewFoodzAdapter(getActivity(), restaurantNewOnFoodzModelArrayListReceived, CITY);
+                        LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+                        newjustfoodzrecycler.setLayoutManager(horizontalLayoutManager1);
+                        newjustfoodzrecycler.setAdapter(newFoodzAdapter);
+                    } else {
+                        meal.setVisibility(View.GONE);
+                        viewall.setVisibility(View.GONE);
+                        dealsrecycler.setVisibility(View.GONE);
+                    }
+
+                }
+                MyProgressDialog.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<Model_New_Foodz_Reasurant> call, Throwable t) {
+//                Toast.makeText(getActivity(), "" + t.toString(), Toast.LENGTH_SHORT).show();
+
+                MyProgressDialog.dismiss();
+
+            }
+        });
+
+
+    }
+
+    public void HitURLforSpecialOffersData() {
+
+        restaurantSpecialOfferModelArrayListReceived = new ArrayList<RestaurantModel>();
+        InterUserdata interfaceRetrofit = RetrofitAdapter.createService(InterUserdata.class);
+        Call<Model_Special_Offer_Reasurant> userLoginCall = interfaceRetrofit.hitURLforSpecialOffer(myPref.getState(), myPref.getCity(),
+                myPref.getLatitude(), myPref.getLongitude());
+        System.out.println("==== userlogin : " + userLoginCall.toString());
+        userLoginCall.enqueue(new Callback<Model_Special_Offer_Reasurant>() {
+            @Override
+            public void onResponse(Call<Model_Special_Offer_Reasurant> call, retrofit2.Response<Model_Special_Offer_Reasurant> response) {
+                if (response.isSuccessful()) {
+
+                    for (int i = 0; i < response.body().getSearchResult().size(); i++) {
+                        if (!response.body().getSearchResult().get(i).getError().equalsIgnoreCase("2")) {
+
+                            RestaurantModel restaurantFreeDeliveryModel = response.body().getSearchResult().get(i);
+                            meal.setVisibility(View.VISIBLE);
+                            dealsrecycler.setVisibility(View.VISIBLE);
+
+                            HomeFragment.restaurantDpecialOfferModel = restaurantFreeDeliveryModel;
+                            restaurantSpecialOfferModelArrayListReceived.add(HomeFragment.restaurantDpecialOfferModel);
+                        }
+                    }
+
+                    if (restaurantSpecialOfferModelArrayListReceived.size() > 0) {
+                        SpecialOfferAdapter newFoodzAdapter = new SpecialOfferAdapter(getActivity(), restaurantSpecialOfferModelArrayListReceived, CITY);
+                        LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+                        specialofferrecycler.setLayoutManager(horizontalLayoutManager1);
+                        specialofferrecycler.setAdapter(newFoodzAdapter);
+                    }
+                    else
+                        {
+                        meal.setVisibility(View.GONE);
+                        viewall.setVisibility(View.GONE);
+                        dealsrecycler.setVisibility(View.GONE);
+                    }
+
+                }
+                MyProgressDialog.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<Model_Special_Offer_Reasurant> call, Throwable t) {
+//                Toast.makeText(getActivity(), "" + t.toString(), Toast.LENGTH_SHORT).show();
+
+                MyProgressDialog.dismiss();
+
+            }
+        });
+
+
+    }
+
+    public void HitURLforMustTryRest() {
+
+        restaurantMustTryModelArrayListReceived = new ArrayList<RestaurantModel>();
+        InterUserdata interfaceRetrofit = RetrofitAdapter.createService(InterUserdata.class);
+        Call<Model_Must_Try_Reasurant> userLoginCall = interfaceRetrofit.hitURLforMustTryRest(myPref.getState(), myPref.getCity(),
+                myPref.getLatitude(), myPref.getLongitude());
+        System.out.println("==== userlogin : " + userLoginCall.toString());
+        userLoginCall.enqueue(new Callback<Model_Must_Try_Reasurant>() {
+            @Override
+            public void onResponse(Call<Model_Must_Try_Reasurant> call, retrofit2.Response<Model_Must_Try_Reasurant> response) {
+                if (response.isSuccessful()) {
+
+                    for (int i = 0; i < response.body().getSearchResult().size(); i++) {
+                        if (!response.body().getSearchResult().get(i).getError().equalsIgnoreCase("2")) {
+
+                            RestaurantModel restaurantFreeDeliveryModel = response.body().getSearchResult().get(i);
+                            meal.setVisibility(View.VISIBLE);
+                            dealsrecycler.setVisibility(View.VISIBLE);
+
+                            HomeFragment.restaurantMustTryModel = restaurantFreeDeliveryModel;
+                            restaurantMustTryModelArrayListReceived.add(HomeFragment.restaurantMustTryModel);
+
+
+                        }
+                    }
+
+                    if (restaurantMustTryModelArrayListReceived.size() > 0) {
+                        NewMustTryRestAdapter newMustTryRestAdapter = new NewMustTryRestAdapter(getActivity(), restaurantMustTryModelArrayListReceived, CITY);
+                        LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+                        musttryrestaurantrecycler.setLayoutManager(horizontalLayoutManager1);
+                        musttryrestaurantrecycler.setAdapter(newMustTryRestAdapter);
+                    } else {
+                        meal.setVisibility(View.GONE);
+                        viewall.setVisibility(View.GONE);
+                        dealsrecycler.setVisibility(View.GONE);
+                    }
+
+                }
+                MyProgressDialog.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<Model_Must_Try_Reasurant> call, Throwable t) {
+//                Toast.makeText(getActivity(), "" + t.toString(), Toast.LENGTH_SHORT).show();
+
+                MyProgressDialog.dismiss();
+
+            }
+        });
+
+
+    }
+
+    public void HitURLforNationalBrandsData() {
+
+        nationalBrandsList = new ArrayList<>();
+        InterUserdata interfaceRetrofit = RetrofitAdapter.createService(InterUserdata.class);
+        Call<Model_National_Brands_Reasurant> userLoginCall = interfaceRetrofit.NationalBrandsSearch();
+        userLoginCall.enqueue(new Callback<Model_National_Brands_Reasurant>() {
+            @Override
+            public void onResponse(Call<Model_National_Brands_Reasurant> call, retrofit2.Response<Model_National_Brands_Reasurant> response) {
+                if (response.isSuccessful()) {
+
+                    for (int i = 0; i < response.body().getQuickSearchList().size(); i++) {
+                        RestaurantNatonalBrandsModel featuredPartnerModel = response.body().getQuickSearchList().get(i);
+                        nationalBrandsList.add(featuredPartnerModel);
+
+                    }
+
+                    if (nationalBrandsList.size() > 0) {
+                        NationalBrandsAdapter nationalBrandsAdapter = new NationalBrandsAdapter(getActivity(), nationalBrandsList);
+                        LinearLayoutManager horizontalLayoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+                        nationalbrandsrecycler.setLayoutManager(horizontalLayoutManager2);
+                        nationalbrandsrecycler.setAdapter(nationalBrandsAdapter);
+                    }
+
+
+                }
+                MyProgressDialog.dismiss();
+
+            }
+
+            @Override
+            public void onFailure(Call<Model_National_Brands_Reasurant> call, Throwable t) {
+                Toast.makeText(getActivity(), "" + t.toString(), Toast.LENGTH_SHORT).show();
+                MyProgressDialog.dismiss();
             }
         });
 
@@ -1332,6 +1560,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
+
     public class QuickAdapter extends RecyclerView.Adapter<QuickAdapter.ViewHolder> {
 
         Context context;
@@ -1945,6 +2174,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
         }
     }
+
 
     private boolean checkAndRequestPermissions() {
         int permissionSendMessage = ContextCompat.checkSelfPermission(getActivity(),
